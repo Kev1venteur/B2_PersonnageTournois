@@ -31,10 +31,7 @@ namespace personnageBraux.Autres
                         throw new pdvSousZeroException();
                     }
                 }
-                catch (pdvSousZeroException)
-                {
-                    Console.WriteLine("Impossible de se battre, un des deux combattants est mort !!!");
-                }
+                catch (pdvSousZeroException) { }
             }
         }
         public void accepterTournoi(IAttaquantMagie un, IAttaquantMagie deux)
@@ -61,7 +58,7 @@ namespace personnageBraux.Autres
                         throw new pdvSousZeroException();
                     }
                 }
-                catch (pdvSousZeroException){}
+                catch (pdvSousZeroException) { }
             }
         }
     }

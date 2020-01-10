@@ -10,6 +10,18 @@ namespace personnageBraux.Test
         Sac sac = new Sac();
         Arme armeParDefaut = new Arme();
         [TestMethod]
+        public void TestCreationSac()
+        {
+            try
+            {
+                if (sac is null)
+                {
+                    throw new sacCreationException();
+                };
+            }
+            catch (sacCreationException) { }
+        }
+        [TestMethod]
         public void TestPushSac()
         {
             try
@@ -17,23 +29,37 @@ namespace personnageBraux.Test
                 sac.ajouterObjet(armeParDefaut);
                 if(sac.getNombreObjetDansSac() != 1)
                 {
-                    throw new sacPushNeFonctionnePas();
+                    throw new sacPushException();
                 };
             }
-            catch (sacPushNeFonctionnePas){}
+            catch (sacPushException) { }
         }
         [TestMethod]
         public void TestPopSac()
         {
             try
             {
+                sac.ajouterObjet(armeParDefaut);
                 sac.enleverObjet();
                 if (sac.getNombreObjetDansSac() != 0)
                 {
-                    throw new sacPopNeFonctionnePas();
+                    throw new sacPopException();
                 };
             }
-            catch (sacPopNeFonctionnePas){}
+            catch (sacPopException) { }
+        }
+        [TestMethod]
+        public void TestComptageSac()
+        {
+            try
+            {
+                sac.ajouterObjet(armeParDefaut);
+                if (sac.getNombreObjetDansSac() != 1)
+                {
+                    throw new sacComptageException();
+                };
+            }
+            catch (sacComptageException) { }
         }
     }
 }
