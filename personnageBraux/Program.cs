@@ -1,4 +1,6 @@
-﻿using System;
+﻿using personnageBraux.Autres;
+using personnageBraux.Persos;
+using System;
 
 namespace personnageBraux
 {

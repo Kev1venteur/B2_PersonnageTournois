@@ -1,8 +1,8 @@
-﻿using System;
+﻿using personnageBraux.Autres;
+using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace personnageBraux
+namespace personnageBraux.Persos
 {
     abstract class Personnage : IComparable<Personnage>
     {

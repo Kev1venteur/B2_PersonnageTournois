@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace personnageBraux
+namespace personnageBraux.Autres
 {
-    class Arme
+    public class Arme
     {
         private string type;
         private int puissance;

@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Collections;
+﻿using personnageBraux.Interfaces;
+using personnageBraux.Autres;
 
-namespace personnageBraux
+namespace personnageBraux.Persos
 {
     class Guerrier : Personnage, IAttaquantArme
     {

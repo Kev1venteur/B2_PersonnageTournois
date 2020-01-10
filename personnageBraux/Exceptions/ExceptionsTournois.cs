@@ -8,7 +8,7 @@ namespace personnageBraux.Exceptions
     {
         public pdvSousZeroException()
         {
-
+            Console.WriteLine("Impossible de se battre, un des deux combattants n'a plus de point de vie !!!");
         }
     }
 }

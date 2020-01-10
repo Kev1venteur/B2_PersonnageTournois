@@ -1,9 +1,9 @@
 ﻿using personnageBraux.Exceptions;
+using personnageBraux.Interfaces;
+using personnageBraux.Persos;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace personnageBraux
+namespace personnageBraux.Autres
 {
     class Tournoi
     {
@@ -61,10 +61,7 @@ namespace personnageBraux
                         throw new pdvSousZeroException();
                     }
                 }
-                catch (pdvSousZeroException)
-                {
-                    Console.WriteLine("Impossible de se battre, un des deux combattants est mort !!!");
-                }
+                catch (pdvSousZeroException){}
             }
         }
     }

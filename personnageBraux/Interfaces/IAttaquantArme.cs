@@ -1,4 +1,6 @@
-﻿namespace personnageBraux
+﻿using personnageBraux.Persos;
+
+namespace personnageBraux.Interfaces
 {
     internal interface IAttaquantArme
     {

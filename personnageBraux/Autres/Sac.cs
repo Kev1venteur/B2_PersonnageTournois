@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Collections;
 using System.Text;
 
-namespace personnageBraux
+namespace personnageBraux.Autres
 {
-    class Sac
+    public class Sac
     {
         private static int nombreObjetMaxParSac = 5;
         private int nombreObjetDansSac;
@@ -30,6 +30,10 @@ namespace personnageBraux
             {
                 Console.WriteLine("\nSac déja plein!");
             }
+        }
+        public int getNombreObjetDansSac()
+        {
+            return this.nombreObjetDansSac;
         }
     }
 }

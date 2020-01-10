@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace personnageBraux
+namespace personnageBraux.Autres
 {
     class Sort
     {

@@ -1,8 +1,9 @@
-﻿using System;
+﻿using personnageBraux.Persos;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace personnageBraux
+namespace personnageBraux.Autres
 {
     class Team
     {

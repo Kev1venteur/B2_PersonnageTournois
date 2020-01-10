@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29215.179
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "personnageBraux", "personnageBraux\personnageBraux.csproj", "{4D4056CA-A677-4ADC-8307-663962461CF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{B0840B58-01DF-40E8-A70B-C4E8EABD5317}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "personnageBraux.Test", "UnitTestProject1\personnageBraux.Test.csproj", "{B0840B58-01DF-40E8-A70B-C4E8EABD5317}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

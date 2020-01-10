@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using personnageBraux.Autres;
+using personnageBraux.Interfaces;
 
-namespace personnageBraux
+namespace personnageBraux.Persos
 {
     class Paladin : Personnage, IAttaquantArme, IAttaquantMagie
     {
