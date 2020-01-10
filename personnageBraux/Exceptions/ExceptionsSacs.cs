@@ -13,9 +13,16 @@ namespace personnageBraux.Exceptions
     }
     public class sacPushException : Exception
     {
-        public sacPushException()
+        public sacPushException(int error_number)
         {
-            Console.WriteLine("Impossible d'ajouter un objet au sac");
+            if(error_number == 1)
+            {
+                Console.WriteLine("Problème lors de l'ajout d'un objet");
+            }
+            else if (error_number == 2)
+            {
+                Console.WriteLine("Problème lors de l'ajout de plus d'objet que le max prévu");
+            }
         }
     }
     public class sacPopException : Exception

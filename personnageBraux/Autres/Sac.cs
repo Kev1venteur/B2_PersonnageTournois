@@ -35,5 +35,9 @@ namespace personnageBraux.Autres
         {
             return this.nombreObjetDansSac;
         }
+        public int getNombreObjetMaxSac()
+        {
+            return nombreObjetMaxParSac;
+        }
     }
 }

@@ -24,12 +24,23 @@ namespace personnageBraux.Test
         [TestMethod]
         public void TestPushSac()
         {
+            int error_number;
             try
             {
-                sac.ajouterObjet(armeParDefaut);
+                sac.ajouterObjet(armeParDefaut); //Test de la fonction ajouter de base en ajoutant un seul objet
                 if(sac.getNombreObjetDansSac() != 1)
                 {
-                    throw new sacPushException();
+                    error_number = 1; 
+                    throw new sacPushException(error_number);
+                };
+                for(int i=0; i< sac.getNombreObjetMaxSac(); i++)
+                {
+                    sac.ajouterObjet(armeParDefaut);
+                }
+                if (sac.getNombreObjetDansSac() != sac.getNombreObjetMaxSac()) //Test d'ajout d'un nombre d'objet supérieur au max prévu
+                {
+                    error_number = 2;
+                    throw new sacPushException(error_number);
                 };
             }
             catch (sacPushException) { }
