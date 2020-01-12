@@ -7,7 +7,7 @@ namespace personnageBraux.Autres
 {
     class Tournoi
     {
-        public void accepterTournoi(IAttaquantArme un, IAttaquantArme deux)
+        public void accepterTournoi(ref IAttaquantArme un, ref IAttaquantArme deux)
         {
             int turn = 1;
             while (un.getVie() > 0 && deux.getVie() > 0)
@@ -34,7 +34,7 @@ namespace personnageBraux.Autres
                 catch (pdvSousZeroException) { }
             }
         }
-        public void accepterTournoi(IAttaquantMagie un, IAttaquantMagie deux)
+        public void accepterTournoi(ref IAttaquantMagie un, ref IAttaquantMagie deux)
         {
             int turn = 1;
             while (un.getVie() > 0 && deux.getVie() > 0)

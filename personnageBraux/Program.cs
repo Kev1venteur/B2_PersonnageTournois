@@ -67,15 +67,42 @@ namespace personnageBraux
                     System.Threading.Thread.Sleep(2000);
                 }
             }
-            Team equipe1 = new Team(); //Créer une team de 10 perso aléatoire (Par défaut)
-            equipe1.afficher();
-            Tournoi tournoi = new Tournoi();
-            IAttaquantMagie joueur2 = new Mage("j2");
-            IAttaquantArme joueur3 = new Guerrier("j3");
+            //Team equipe1 = new Team(); //Créer une team de 10 perso aléatoire (Il est aussi possible de spécifier un nombre de membres)
+            //equipe1.afficher();
 
-            //tournoi.accepterTournoi(joueur1, joueur2); //besoin de caster les type pour lancer un tournoi
-            Console.WriteLine(joueur1.getVie());
-            Console.WriteLine(joueur2.getVie());
+            Tournoi tournoi = new Tournoi();
+
+            IAttaquantMagie joueur2 = new Mage("j2");     //  On Créer des personnages
+            IAttaquantArme joueur3 = new Guerrier("j3");  //     pour se battre avec le joueur 1
+
+            //Bloc pour demander au joueur s'il veut jouer avec les armes ou les sort si il est paladin
+            int sortOuArme = 0; 
+            if (joueur1 is Persos.Paladin)
+            {
+                Console.WriteLine("En tant que paladin, voulez-vous jouer avec les sort ou les armes?");
+                Console.WriteLine("1 : Sort");
+                Console.WriteLine("2 : Arme");
+                string getTypePerso = Console.ReadLine();
+                sortOuArme = int.Parse(getTypePerso);
+            }
+
+            //On cast le joueur 1 en fonction de son type de personnage choisi
+            if (joueur1 is Persos.Mage || joueur1 is Persos.Chaman || sortOuArme == 1)
+            {
+                IAttaquantMagie castedJoueur1Magie = (IAttaquantMagie)joueur1;
+                Console.WriteLine("\nLes Personnage vont se battre tour à tour automatiquement\n");
+                tournoi.accepterTournoi(ref castedJoueur1Magie, ref joueur2);
+                Console.WriteLine("\nVie de votre personnage : " + castedJoueur1Magie.getVie());
+                Console.WriteLine("Vie du personnage adverse : " + joueur2.getVie());
+            }
+            else if (joueur1 is Persos.Guerrier || joueur1 is Persos.Voleur || sortOuArme == 2)
+            {
+                IAttaquantArme castedJoueur1Arme = (IAttaquantArme)joueur1;
+                Console.WriteLine("\nLes Personnage vont se battre tour à tour automatiquement\n");
+                tournoi.accepterTournoi(ref castedJoueur1Arme, ref joueur3);
+                Console.WriteLine("\nVie de votre personnage : " + castedJoueur1Arme.getVie());
+                Console.WriteLine("Vie du personnage adverse : " + joueur3.getVie());
+            }
         }
     }
 }

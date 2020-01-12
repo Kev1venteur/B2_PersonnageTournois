@@ -41,7 +41,7 @@ namespace personnageBraux.Autres
                 }
             }
             this.numberOfPerso = 10;
-            Console.WriteLine("\nEquipe de " + 10 + " joueurs créée! \nVoici sa composotion :\n");
+            Console.WriteLine("\nEquipe de 10 joueurs créée!\n");
         }
         public Team(int nbJoueurs)
         {
@@ -75,7 +75,7 @@ namespace personnageBraux.Autres
                 }
             }
             this.numberOfPerso = nbJoueurs;
-            Console.WriteLine("\nEquipe de " + nbJoueurs + " joueurs créée! \nVoici sa composotion :\n");
+            Console.WriteLine("\nEquipe de " + nbJoueurs + " joueurs créée!\n");
         }
         public void afficher()
         {
