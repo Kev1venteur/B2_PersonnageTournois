@@ -1,6 +1,7 @@
 ﻿using personnageBraux.Autres;
 using personnageBraux.Interfaces;
 using personnageBraux.Persos;
+using System.Threading;
 using System;
 
 namespace personnageBraux
@@ -103,6 +104,15 @@ namespace personnageBraux
                 Console.WriteLine("\nVie de votre personnage : " + castedJoueur1Arme.getVie());
                 Console.WriteLine("Vie du personnage adverse : " + joueur3.getVie());
             }
+
+            #region Code Pour Le traitement Asynchrone
+            /*Thread thr1 = new Thread(tournoi.accepterTournoi(ref castedJoueur1Arme, ref joueur3));
+            Thread thr2 = new Thread(tournoi.accepterTournoi(ref castedJoueur1Arme, ref joueur3));
+            thr1.Start();
+            thr2.Start();
+            Reste à travailler avec les équipes et ajouter des vitesse d'attaque pour rendre les thread utiles
+             */
+            #endregion
         }
     }
 }
